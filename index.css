@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts */
+.f-display { font-family: 'Fraunces', Georgia, serif; font-optical-sizing: auto; }
+.f-body { font-family: 'Geist', system-ui, sans-serif; }
+.f-mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+/* Paper aesthetic */
+.paper {
+  background: #faf6ee;
+  background-image:
+    radial-gradient(at 20% 10%, #f4ead7 0px, transparent 50%),
+    radial-gradient(at 80% 90%, #f6ecd9 0px, transparent 50%);
+}
+.ink { color: #1c1612; }
+.ink-soft { color: #5c4f44; }
+.ink-faint { color: #8a7866; }
+.rule { border-color: #d9cdb8; }
+
+/* Inputs */
+.input-paper {
+  background: #fbf7ef;
+  border: 1px solid #d9cdb8;
+  color: #1c1612;
+}
+.input-paper:focus {
+  outline: none;
+  border-color: #a16207;
+  box-shadow: 0 0 0 3px rgba(161, 98, 7, 0.12);
+}
+
+/* Buttons */
+.btn-primary { background: #1c1612; color: #faf6ee; }
+.btn-primary:hover { background: #2d231b; }
+.btn-ghost { background: transparent; color: #1c1612; border: 1px solid #d9cdb8; }
+.btn-ghost:hover { background: #f4ead7; }
+
+/* Chips */
+.chip { background: #fbf7ef; border: 1px solid #d9cdb8; transition: all 0.15s; }
+.chip:hover { background: #f4ead7; transform: translateY(-1px); }
+
+/* Animations */
+@keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+.pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fade-up 0.4s ease-out; }
+
+@keyframes slide-down {
+  from { opacity: 0; transform: translate(-50%, -20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+.slide-down { animation: slide-down 0.4s ease-out; }
+
+body {
+  font-family: 'Geist', system-ui, sans-serif;
+  background: #faf6ee;
+  margin: 0;
+}
